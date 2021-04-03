@@ -21,7 +21,7 @@ export async function checkCVS(driver: WebDriver) {
         const available = statuses.filter(s => s != 'Fully Booked');
 
         if (available.length > 0) {
-            await Slack.notify(`[TEST] Vaccine appointments may be available now at CVS: ${url}`);
+            await Slack.notify(`Vaccine appointments may be available now at CVS: ${url}`);
         }
 
     } finally {

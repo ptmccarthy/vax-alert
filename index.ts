@@ -10,6 +10,5 @@ import { checkCVS } from './src/cvs';
         .setChromeOptions(new chrome.Options().headless())
         .build();
 
-    // const cvs = cron.schedule('*/5 * * * *', () => checkCVS(driver));
-    checkCVS(driver)
+    cron.schedule('*/5 * * * *', () => checkCVS(driver));
 })();
